@@ -35,7 +35,8 @@ module.exports = function (grunt) {
         });
         delete opts.noParse;
       }
-
+      ctorOpts.extensions = [ '.js','.coffee' ];
+      
       var b = browserify(ctorOpts);
       b.on('error', function (err) {
         grunt.fail.warn(err);
